@@ -1,0 +1,251 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+:root {
+    --accent: #00909e;
+    --dark: #092532;
+    --light: #f5eaea;
+    --overlay: rgba(9, 37, 50, 0.8);
+    --ease: all 0.3s ease 0s;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #222831;
+
+    /*margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 1px;*/
+}
+
+p, button, h1, h4, h2 { 
+    color: #e5dfdf;
+}
+
+p, h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h4, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p, h4 {
+    font-size: 18px;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "top_section"
+    "message_section"
+    "content_section"
+}
+
+.bg_video{
+	position: absolute; 
+	right: 0; 
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+	height: auto; 
+	z-index: -1000;
+	background: url(images/torre.jpg) no-repeat;
+	background-size: cover; 
+}
+
+.top_section {
+    grid-area: top_section;
+    min-height: 370px;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-areas: 
+    ". header .";
+    background: linear-gradient(rgba(34,40,49,0.8), rgba(34,40,49,0.8)), /*url(images/image-17.jpg)*/;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header p {
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+header button {
+    width: 131px;
+    padding: 12px 0;
+    background-color: #29a19c;
+    border: none;
+    border-radius: 2px;
+}
+
+.slide {
+    position: relative;
+    padding: 20% 10%;
+    min-height: 100%;
+    width: 100%;
+    transform-style: inherit;
+}
+
+.message_section {
+    grid-area: message_section;
+    display: flex;
+    justify-content: center;
+    z-index: -5;
+    background-color: #222831;
+    background-image: url(images/image-angelo-2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.message {
+    grid-area: message;
+    max-width: 650px;
+    text-align: center;
+    text-shadow: 0 3px 2px rgba(34,40,49,0.8);
+    margin: 30px 0;
+    mix-blend-mode: screen;
+}
+
+.content_section {
+    grid-area: content_section;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-areas: 
+    ". playlist_one .";
+    margin-bottom: 60px;
+    height: 1500px;
+}
+
+.content_section--no-padding {
+    padding: 0;
+}
+
+.playlist_one { 
+    grid-area: playlist_one;
+    height: 1500px;
+}
+
+.section_title {
+    margin: 100px auto;
+    text-align: center;
+    max-width: 650px;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+.video {
+    height: 150px;
+    grid-column-start: span 3;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+}
+
+.video:hover {
+    transform: scale(1.02);
+}
+
+.video i {
+    cursor: pointer;
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #e5dfdf;
+    opacity: 0.85;
+    transition: all 0.3s ease 0s;
+}
+
+.video i:hover {
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer i {
+    color: #e5dfdf;
+    font-size: 20px;
+    height: 10px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .video {
+        grid-column-start: span 6;
+        height: 240px;
+    }
+    .message_section {
+        max-width: auto;
+        max-height: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .video {
+        grid-column-start: span 12;
+    }
+    .message_section {
+        max-width: auto;
+        max-height: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .message_section {
+        max-width: auto;
+        max-height: 100%;
+    }
+}

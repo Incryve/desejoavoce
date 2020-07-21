@@ -76,7 +76,6 @@ button:hover {
 	width: auto; 
 	height: auto; 
 	z-index: -1000;
-	background: url(images/torre.jpg) no-repeat;
 	background-size: cover; 
 }
 
@@ -87,7 +86,7 @@ button:hover {
     grid-template-columns: 10% 1fr 10%;
     grid-template-areas: 
     ". header .";
-    background: linear-gradient(rgba(34,40,49,0.8), rgba(34,40,49,0.8)), /*url(images/image-17.jpg)*/;
+    background: linear-gradient(rgba(34,40,49,0.8), rgba(34,40,49,0.8)), url(images/image-yve.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

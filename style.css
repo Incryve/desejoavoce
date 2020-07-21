@@ -143,6 +143,10 @@ header button {
     mix-blend-mode: screen;
 }
 
+i {
+    color: #e5dfdf;
+}
+
 .content_section {
     grid-area: content_section;
     display: grid;

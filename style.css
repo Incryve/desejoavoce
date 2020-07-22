@@ -125,6 +125,7 @@ header button {
     display: flex;
     justify-content: center;
     z-index: -5;
+    max-width: 100%;
     background-color: #222831;
     background-image: url(image-angelo-2.jpg);
     background-attachment: fixed;
